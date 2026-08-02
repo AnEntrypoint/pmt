@@ -1,0 +1,64 @@
+- id: design-anchor-schema
+  subject: 'Fix the mermaid anchor schema: node id/label syntax, author-year attribution form, MECE category subgraphs, nonlinear backreference edge style, link to external Semantic-Anchors catalog anchors'
+  witness: 'schema fixed: snake_case node ids; label = Name<br/>Author (Year) ''Title''; MECE category subgraphs; solid --- intra-domain edges; dotted -.-> nonlinear cross-domain backreferences; external Semantic-Anchors catalog subgraph'
+  status: completed
+- id: verify-mermaid-syntax
+  subject: Validate every mermaid block in trading/SKILL.md parses (mermaid parser via node, real execution witness)
+  witness: 'exec_js-16 on final artifact: mermaid.parse returned {ok:true, diagramType:''flowchart-v2''} with maxEdges raised (real mermaid v11 engine under jsdom)'
+  status: completed
+- id: source-extract-zh-readme
+  subject: Extract any items present in README_zh.md but missing from README.md (Chinese-specific resources)
+  witness: 'comm diff of extracted link sets: README_zh.md is a pure translation; zero substantive extra resources (only localized anchor links)'
+  status: completed
+- id: source-extract-strategies-dir
+  subject: Enumerate all 60 .py strategy implementations and pairs-trading-with-stocks dir under static/strategies for graph coverage
+  witness: 'find/file: 60 .py + 1 extensionless Python script (pairs-trading-with-stocks) = 61 strategy implementations; all map to README strategy rows'
+  status: completed
+- id: research-microstructure-execution
+  subject: 'Subagent: anchor research for market microstructure/execution/HFT (Harris, O''Hara, Hasbrouck, Almgren-Chriss, Cartea, Bodek)'
+  witness: agent-5 returned 42 attributed anchors + 9 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: research-behavioral-psychology
+  subject: 'Subagent: anchor research for behavioral finance and trading psychology (Kahneman-Tversky, Thaler, Shiller, Elder, Douglas, Covel, Schwager)'
+  witness: agent-6 returned 44 attributed anchors + 10 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: assemble-skill-md
+  subject: 'Assemble trading/SKILL.md: minimal skill frontmatter + body purely the nonlinear backreferencing mermaid anchor graph covering every extracted and researched anchor'
+  witness: 'trading/SKILL.md written: minimal frontmatter + single mermaid flowchart block, 530 anchors / 739 edges / 62 subgraphs; body contains only anchors in nonlinear backreferencing mermaid format'
+  status: completed
+- id: source-extract-en-readme
+  subject: Extract every item from awesome-systematic-trading README.md (97 libs, 57 strategies, 55 books, 23 videos, 10 blogs, 11 courses) into the anchor candidate pool
+  witness: 'README.md 578 lines read in full; inventory: 97 libs, 57 strategies, 55 books, 23 videos, 10 blogs, 11 courses'
+  status: completed
+- id: research-portfolio-asset-pricing
+  subject: 'Subagent: anchor research for portfolio theory and asset pricing (Markowitz, Sharpe/CAPM, Fama-French, Black-Litterman, risk parity, factor zoo) with verified literature attribution'
+  witness: agent-0 returned 41 attributed anchors + 10 crossdomain edges, stored in .gm/research-swarm.txt
+  status: completed
+- id: research-momentum-trend-anomalies
+  subject: 'Subagent: anchor research for momentum/trend/mean-reversion/carry anomaly literature incl. authors of the repo''s 57 strategy papers'
+  witness: agent-1 returned 46 attributed anchors + 10 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: research-vol-options-derivatives
+  subject: 'Subagent: anchor research for volatility/options/derivatives literature (Black-Scholes-Merton, Hull, Natenberg, Sinclair, Taleb, Gatheral)'
+  witness: agent-2 returned 44 attributed anchors + 10 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: verify-completeness-coverage
+  subject: 'Coverage check: every README.md item, every strategy .py, and every researched anchor appears as a node in the graph; no orphan prose in SKILL.md'
+  witness: 'exec_js-15: 530 nodes/739 edges/62 balanced subgraphs; undefinedEndpoints, isolatedNodes, malformedEdges, missingRepos (102), missingStrats (57), missingBooks (55), missingLearn (34) all empty against README.md'
+  status: completed
+- id: verify-attributions
+  subject: 'Attribution check: every anchor cites well-known literature with correct author(s) and year; spot-verify against web sources'
+  witness: 7 research subagents web-verified every attribution; 2 subagents verified 57 strategy papers via Crossref DOI + Wayback SSRN; main-agent Crossref spot-checks confirmed Maewal/Bock 2011 and Kozlov/Petajisto 2012
+  status: completed
+- id: research-backtesting-ml-methodology
+  subject: 'Subagent: anchor research for backtesting methodology and financial ML (Lopez de Prado, Bailey, Aronson, Pardo, Chan, Jansen, deflated Sharpe, CPCV)'
+  witness: agent-3 returned 44 attributed anchors + 10 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: research-risk-sizing-tails
+  subject: 'Subagent: anchor research for risk management, position sizing, tail risk (Kelly, Vince, Taleb, drawdown control, VaR/ES, risk of ruin)'
+  witness: agent-4 returned 44 attributed anchors + 9 crossdomain edges in .gm/research-swarm.txt
+  status: completed
+- id: hygiene-gitignore-transients
+  subject: Keep transient gm/session files out of the new git root (.gitignore covers .gm/exec-spool, snapshot files); deliverable committed clean
+  witness: relabel.mjs, fix-fences.mjs, .gm-instruction-snap.md, package.json, package-lock.json, node_modules deleted; .gitignore covers awesome-systematic-trading/, .gm/exec-spool/, .gm/witness/
+  status: completed

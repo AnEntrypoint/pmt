@@ -1,0 +1,11 @@
+awesome-systematic-trading/
+.gm/exec-spool/
+.gm/witness/
+.agentplug/
+.agentplug-kv/
+.gm/config-source-cache-default*
+.gm/last-dispatch-ts
+.gm/last-instruction-ts
+.gm/last-prompt.txt
+.gm/long-gap-retry-state
+.gm/next-step.md
