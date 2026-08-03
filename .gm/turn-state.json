@@ -1,8 +1,8 @@
 {
-  "phase": "COMPLETE",
+  "phase": "RES",
   "session_id": null,
-  "last_skill": "update-docs",
-  "updated_at_ms": 1785690748946,
+  "last_skill": "gm-decide",
+  "updated_at_ms": 1785775120880,
   "pending_step_id": null,
   "pending_step_deadline_ms": null
 }

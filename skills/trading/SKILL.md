@@ -107,11 +107,11 @@ flowchart LR
     lou_polk_skouras["Overnight Versus Intraday Returns<br/>Lou, Polk and Skouras (2019) 'A Tug of War'"]
     gray_vogel_qm["Quantitative Momentum: A Practitioner's Guide<br/>Gray and Vogel (2016)"]
     sapp_mf_momentum["Momentum in Mutual Fund Returns<br/>Travis Sapp (2010) 'The 52-Week High, Momentum, and Predicting Mutual Fund Returns'"]
-    chen_chou_hsieh["Consistent Momentum Strategy<br/>Chen, Chou and Hsieh (2015) 'Persistency of the Momentum Effect'"]
+    chen_chou_hsieh["Consistent Momentum Strategy<br/>Chen, Chou and Hsieh (2017) 'Persistency of the Momentum Effect'"]
     wei_mom_reversal["Momentum and Reversal Combined with Volatility Effect in Stocks<br/>Jason Zhanshun Wei (2011) 'Do Momentum and Reversals Coexist?'"]
     tibbs_style_rotation["Momentum Factor and Style Rotation Effect<br/>Tibbs, Eakins and DeShurko (2008) 'Using Style Index Momentum to Generate Alpha'"]
-    nyberg_poyry["Momentum Factor Combined with Asset Growth Effect<br/>Nyberg and Poyry (2011) 'Firm Expansion and Stock Price Momentum'"]
-    hong_jordan_liu["52-Weeks High Effect in Stocks<br/>Hong, Jordan and Liu (2011) 'Industry Information and the 52-Week High Effect'"]
+    nyberg_poyry["Momentum Factor Combined with Asset Growth Effect<br/>Nyberg and Poyry (2014) 'Firm Expansion and Stock Price Momentum'"]
+    hong_jordan_liu["52-Weeks High Effect in Stocks<br/>Hong, Jordan and Liu (2015) 'Industry Information and the 52-Week High Effect'"]
   end
   jegadeesh_titman --- chan_jegadeesh_lakonishok
   jegadeesh_titman --- moskowitz_grinblatt
@@ -208,8 +208,8 @@ flowchart LR
 
   subgraph CARRY["Carry, Term Structure and Commodity Premia"]
     koijen_carry["Carry Everywhere<br/>Koijen, Moskowitz, Pedersen and Vrugt (2018) 'Carry'"]
-    lustig_currency_carry["Dollar Carry Trade<br/>Lustig, Roussanov and Verdelhan (2011) 'Countercyclical Currency Risk Premia'"]
-    burnside_carry["Carry Trade Payoffs and Risks<br/>Burnside, Eichenbaum and Rebelo (2011)"]
+    lustig_currency_carry["Dollar Carry Trade<br/>Lustig, Roussanov and Verdelhan (2011) 'Common Risk Factors in Currency Markets'"]
+    burnside_carry["Carry Trade Payoffs and Risks<br/>Burnside, Eichenbaum and Rebelo (2011) 'Carry Trade and Momentum in Currency Markets'"]
     db_currency_returns["FX Carry Trade / Currency Momentum Factor / Currency Value Factor PPP Strategy<br/>Deutsche Bank Global Markets Research (2009) 'db Currency Returns'"]
     keynes_backwardation["Normal Backwardation<br/>John Maynard Keynes (1930) 'A Treatise on Money'"]
     working_storage["Theory of Storage<br/>Holbrook Working (1949)"]
@@ -286,10 +286,10 @@ flowchart LR
     bouman_jacobsen_halloween["Halloween Indicator: Sell in May<br/>Bouman and Jacobsen (2002)"]
     hirshleifer_shumway_sun["Good Day Sunshine: Weather and Stock Returns<br/>Hirshleifer and Shumway (2003)"]
     heston_sadka_seas["12 Month Cycle in Cross-Section of Stocks Returns<br/>Heston and Sadka (2008) 'Seasonality in the Cross-Section of Expected Stock Returns'"]
-    cooper_jan_barometer["January Barometer<br/>Cooper, McConnell and Ovtchinnikov (2009)"]
+    cooper_jan_barometer["January Barometer<br/>Cooper, McConnell and Ovtchinnikov (2006) 'The Other January Effect'"]
     xu_mcconnell_tom["Turn of the Month in Equity Indexes<br/>Xu and McConnell (2006) 'Equity Returns at the Turn of the Month'"]
     ma_pratt_payday["Payday Anomaly<br/>Ma and Pratt (2018)"]
-    stivers_sun_opex["Option-Expiration Week Effect<br/>Stivers and Sun (2011)"]
+    stivers_sun_opex["Option-Expiration Week Effect<br/>Stivers and Sun (2013) 'Returns and Option Activity over the Option-Expiration Week for S&P 100 Stocks'"]
     padysak_vojtko_btc["Overnight Seasonality in Bitcoin<br/>Padysak and Vojtko (2022) 'Seasonality, Trend-following, and Mean Reversion in Bitcoin'"]
     vojtko_overnight_sentiment["Market Sentiment and an Overnight Anomaly<br/>Vojtko and Hanicova (2021)"]
   end
@@ -306,20 +306,19 @@ flowchart LR
   xu_mcconnell_tom --- ma_pratt_payday
   ma_pratt_payday --- ariel_holiday
   stivers_sun_opex --- xu_mcconnell_tom
-  stivers_sun_opex --- avellaneda_lipkin_pinning
   padysak_vojtko_btc --- lou_polk_skouras
   vojtko_overnight_sentiment --- padysak_vojtko_btc
   vojtko_overnight_sentiment --- lou_polk_skouras
 
   subgraph SENT["Sentiment, Flows and Cross-Asset Signals"]
-    bernile_lyandres_soccer["Soccer Clubs' Stocks Arbitrage<br/>Bernile and Lyandres (2009) 'Understanding Investor Sentiment: The Case of Soccer'"]
+    bernile_lyandres_soccer["Soccer Clubs' Stocks Arbitrage<br/>Bernile and Lyandres (2011) 'Understanding Investor Sentiment: The Case of Soccer'"]
     driesprong_oil["Crude Oil Predicts Equity Returns<br/>Driesprong, Jacobsen and Maat (2008) 'Striking Oil: Another Puzzle?'"]
     padysak_lending["Synthetic Lending Rates Predict Subsequent Market Return<br/>Matus Padysak (2021)"]
     hanicova_lexical["How to Use Lexical Density of Company Filings<br/>Hanicova, Kalus and Vojtko (2021)"]
     padysak_filings["The Positive Similarity of Company Filings and Stock Returns<br/>Matus Padysak (2020)"]
     padysak_smart_factors["Combining Smart Factors Momentum and Market Portfolio<br/>Matus Padysak (2020) 'The Active vs Passive: Smart Factors, Market Portfolio or Both?'"]
     hanicova_rebal_premium["Rebalancing Premium in Cryptocurrencies<br/>Hanicova and Vojtko (2021)"]
-    akbas_short_interest["Short Interest Effect: Long-Short Version<br/>Akbas, Boehmer, Erturk and Sorescu (2017) 'Why Do Short Interest Levels Predict Stock Returns?'"]
+    akbas_short_interest["Short Interest Effect: Long-Short Version<br/>Akbas, Boehmer, Erturk and Sorescu (2016) 'Short Interest, Returns, and Unfavorable Fundamental Information'"]
   end
   bernile_lyandres_soccer --- hirshleifer_shumway_sun
   bernile_lyandres_soccer --- debondt_thaler_overreaction
@@ -435,7 +434,6 @@ flowchart LR
   callan_bxm --- cboe_put
   cboe_put --- bakshi_kapadia_vrp
   mitton_vorkink_skew --- bali_murray_skew
-  bali_murray_skew --- coval_shumway
   driessen_dispersion --- bennett_trading_vol
   driessen_dispersion --- bakshi_kapadia_vrp
 
@@ -493,7 +491,6 @@ flowchart LR
   treynor_ratio --- jensens_alpha
   jensens_alpha --- capm
   jensens_alpha --- grinold_kahn_law
-  information_ratio --- grinold_kahn_law
   sortino_ratio --- roy_safety_first
   calmar_ratio --- ulcer_index
   calmar_ratio --- sharpe_ratio
@@ -692,7 +689,6 @@ flowchart LR
   jansen_ml4t --- ldp_afml
   jansen_ml4t --- gu_kelly_xiu
   dixon_ml_finance --- deep_learning_book
-  dixon_ml_finance --- sutton_barto_rl
   kelly_xiu_survey --- gu_kelly_xiu
   kelly_xiu_survey --- esl
   gu_kelly_xiu --- breiman_rf
@@ -737,7 +733,6 @@ flowchart LR
   kalman_filter --- hamilton_regime
   gencay_hff --- tsay_afts
   gencay_hff --- hasbrouck_empirical
-  hamilton_regime --- lo_adaptive_markets
 
   subgraph MICRO["Market Microstructure"]
     subgraph MICT["Microstructure Theory"]
@@ -789,7 +784,7 @@ flowchart LR
       patterson_dark_pools["Dark Pools: The Rise of A.I. Trading Machines<br/>Scott Patterson (2012)"]
       bodek_hft["The Problem of HFT: Collected Writings<br/>Haim Bodek (2013)"]
       lewis_flash_boys["Flash Boys<br/>Michael Lewis (2014)"]
-      ohara_easley_ldp_hft["High-Frequency Trading: New Realities<br/>O'Hara, Easley and Lopez de Prado (2014)"]
+      ohara_easley_ldp_hft["High-Frequency Trading: New Realities<br/>Easley, Lopez de Prado and O'Hara (eds.) (2013)"]
     end
   end
   harris_trading_exchanges --- ohara_mm_theory
@@ -813,23 +808,19 @@ flowchart LR
   glosten_milgrom --- easley_pin
   kyle_lambda --- almgren_sqrt
   glosten_lob --- parlour_queue
-  glosten_lob --- foucault_liquidity
   hasbrouck_info_share --- ohara_ye_fragmentation
   hasbrouck_info_share --- kyle_lambda
   easley_pin --- vpin_toxicity
   parlour_queue --- esser_moench_iceberg
   vpin_toxicity --- aldridge_hft
-  cont_impact --- bouchaud_tqp
   cont_impact --- glosten_lob
   perold_shortfall --- kissell_glantz
   perold_shortfall --- almgren_chriss
   berkowitz_vwap --- perold_shortfall
   bertsimas_lo_exec --- almgren_chriss
   almgren_chriss --- almgren_sqrt
-  almgren_chriss --- perold_shortfall
   kissell_glantz --- berkowitz_vwap
   kissell_glantz --- kissell_methods
-  almgren_sqrt --- bouchaud_tqp
   obizhaeva_wang --- almgren_chriss
   obizhaeva_wang --- bertsimas_lo_exec
   avellaneda_stoikov --- gueant_liquidity
@@ -837,7 +828,6 @@ flowchart LR
   gueant_liquidity --- almgren_chriss
   cartea_hft --- aldridge_hft
   cartea_hft --- vpin_toxicity
-  kissell_methods --- kissell_glantz
   johnson_dma --- kissell_glantz
   johnson_dma --- harris_trading_exchanges
   narang_black_box --- cartea_hft
@@ -853,7 +843,6 @@ flowchart LR
   budish_batch --- lewis_flash_boys
   budish_batch --- madhavan_auctions
   reg_nms --- patterson_dark_pools
-  aldridge_hft --- hasbrouck_saar_latency
   patterson_dark_pools --- lewis_flash_boys
   bodek_hft --- harris_trading_exchanges
   bodek_hft --- patterson_dark_pools
@@ -974,7 +963,6 @@ flowchart LR
   buffett_essays --- marks_most_important
   marks_most_important --- marks_cycle
   marks_most_important --- klarman_margin_of_safety
-  marks_cycle --- soros_reflexivity
   klarman_margin_of_safety --- graham_margin_of_safety
   greenblatt_magic --- graham_intelligent
   greenblatt_magic --- quality_minus_junk
@@ -987,7 +975,6 @@ flowchart LR
   douglas_zone --- steenbarger_psych
   douglas_disciplined --- kahneman_tfas
   steenbarger_psych --- kahneman_tfas
-  zuckerman_simons --- mallaby_hedge_funds
   dalio_principles --- dalio_all_weather
   dalio_principles --- marks_most_important
   nekritin_forex --- elder_trading_living
@@ -1020,7 +1007,6 @@ flowchart LR
   barber_odean_hazardous --- perold_shortfall
   shefrin_statman_disposition --- kaminski_lo_stoploss
   shiller_irrational --- faber_global_value
-  mackay_delusions --- shiller_narrative
   george_hwang_52wk --- heuristics_biases
   bernard_thomas_pead --- heuristics_biases
 
@@ -1223,14 +1209,11 @@ flowchart LR
   t_openbb --- t_yfinance
   t_tushare --- t_akshare
   t_yfinance --- t_datareader
-  t_akshare --- t_tushare
   t_datareader --- t_quandl
   t_quandl --- t_findatapy
-  t_findatapy --- t_finmarketpy
   t_investpy --- t_yfinance
   t_fundamental --- piotroski_fscore
   t_wallstreet --- t_yfinance
-  t_cryptofeed --- t_cryptocrawler
   t_gekko --- t_freqtrade
   t_cryptoinscriber --- t_cryptofeed
   t_cryptolake --- t_hftbacktest
@@ -1241,7 +1224,6 @@ flowchart LR
   t_pandas --- t_numpy
   t_numpy --- t_scipy
   t_scipy --- t_pandas
-  t_pymc --- black_litterman
   t_cvxpy --- markowitz_mpt
   t_marketstore --- t_arcticdb
   t_tectonicdb --- t_hftbacktest
@@ -1391,7 +1373,6 @@ flowchart LR
   barroso_santa_clara -.-> harvey_vol_target
   gatev_pairs -.-> engle_granger_coint
   frazzini_pedersen_bab -.-> qian_risk_parity
-  koijen_carry -.-> erb_harvey
   heston_sadka_seas -.-> harvey_liu_zhu
   burnside_carry -.-> taleb_black_swan
   bakshi_kapadia_vrp -.-> ang_factor

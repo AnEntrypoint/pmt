@@ -11,3 +11,7 @@ awesome-systematic-trading/
 .gm/next-step.md
 .gm/residual-check-fired
 .gm/.gm-continue-count
+trading/.agents/
+trading/.claude/
+trading/.gm/
+trading/skills-lock.json

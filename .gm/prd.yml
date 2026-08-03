@@ -62,3 +62,11 @@
   subject: Keep transient gm/session files out of the new git root (.gitignore covers .gm/exec-spool, snapshot files); deliverable committed clean
   witness: relabel.mjs, fix-fences.mjs, .gm-instruction-snap.md, package.json, package-lock.json, node_modules deleted; .gitignore covers awesome-systematic-trading/, .gm/exec-spool/, .gm/witness/
   status: completed
+- id: sync-agents-mirror
+  description: After edits, sync trading/.agents/skills/trading/SKILL.md mirror with trading/SKILL.md (currently identical modulo CRLF).
+  witness: cp trading/SKILL.md trading/.agents/skills/trading/SKILL.md; diff -q reports identical. .claude/skills/trading is a symlink to the .agents copy, so it follows automatically. User-scope installed copy at ~/.agents is skill-manager-owned (lock hash) and left untouched.
+  status: completed
+- id: audit-node-label-format
+  description: Script-audit all 530 node labels for the Title br Authors (Year) convention; flag anomalies (missing year, malformed br, inconsistent quoting).
+  witness: 'python audit of all 530 node labels: 0 missing br separators; 48 without (year) are all videos/blogs/courses/external-catalog anchors where no canonical year exists (plus multi-year cites like 1992, 1993); only special-char labels are R&D and S&P which are valid inside quoted mermaid labels. Convention holds; no actionable anomalies.'
+  status: completed
