@@ -15,3 +15,5 @@ trading/.agents/
 trading/.claude/
 trading/.gm/
 trading/skills-lock.json
+config.bat
+node_modules
